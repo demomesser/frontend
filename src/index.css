@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 html, body, #root, .app {
 	height: 100%;
 	width: 100%;
-	font-family: "DM Sans", sans-serif;
+	font-family: "Outfit", sans-serif;
 
-	@apply text-black;
+	@apply text-white;
 }

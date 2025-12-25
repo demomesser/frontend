@@ -23,7 +23,7 @@ const App = () => {
 	}, []);
     return (
         <div className='app bg-black-20'>
-            <Header selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+            <Header isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
             <Home setSelectedPage={setSelectedPage} />
             <Footer />
         </div>
