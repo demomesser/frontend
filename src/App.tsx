@@ -1,15 +1,30 @@
-import { useEffect, useState } from "react";
 import Header from "./ui/Header"
 import Home from "./ui/Home"
 import Footer from "./ui/Footer"
+import { SelectedPage } from "./shared/types";
+import { useEffect, useState } from "react";
 
 const App = () => {
-    const [isTopOfPage] = useState<boolean>(true)
+    const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
+    const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.HOME)
 
+    useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY === 0) {
+				setIsTopOfPage(true);
+				setSelectedPage(SelectedPage.HOME)
+			} else
+				if (window.scrollY !== 0) {
+					setIsTopOfPage(false);
+				}
+		}
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
     return (
-        <div className='app bg-gray-20'>
-            <Header isTopPage={isTopOfPage}/>
-            <Home />
+        <div className='app bg-black-20'>
+            <Header selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
+            <Home setSelectedPage={setSelectedPage} />
             <Footer />
         </div>
 
