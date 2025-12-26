@@ -6,17 +6,25 @@ type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 }
 
-const Link = ({page, selectedPage, setSelectedPage}: Props) => {
+const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
 
     return (
         <a
-            href={`#${page}`}
-            onClick={()=> setSelectedPage(page)}
-            className={`${selectedPage === page ? "text-primary-500" : ""} transition duration-500 hover:text-[#EDFA8B]`}
+            onClick={(e) => {
+                e.preventDefault();
+                setSelectedPage(page);
+
+                document.getElementById(page)?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }}
+            className={`cursor-pointer ${selectedPage === page ? "text-primary-500" : ""
+                } transition duration-500 hover:text-[#EDFA8B]`}
         >
             {page.replace("-", " ")}
         </a>
-    )
+    );
 }
 
 export default Link

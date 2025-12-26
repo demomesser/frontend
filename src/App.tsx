@@ -1,10 +1,12 @@
 import Header from "./ui/Header"
 import Home from "./ui/Home"
 
-import AboutUs from "./ui/aboutUs";
+import AboutUs from "./ui/AboutUs";
 import Footer from "./ui/Footer"
 import { SelectedPage } from "./shared/types";
 import { useEffect, useState } from "react";
+import Services from "./ui/Services";
+import Contact from "./ui/Contact";
 
 const App = () => {
     const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
@@ -28,6 +30,8 @@ const App = () => {
             <Header isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
             <Home setSelectedPage={setSelectedPage} />
             <AboutUs setSelectedPage={setSelectedPage} />
+            <Services setSelectedPage={setSelectedPage}/>
+            <Contact setSelectedPage={setSelectedPage} />
             <Footer />
         </div>
 

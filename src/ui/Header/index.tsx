@@ -10,14 +10,26 @@ type Props = {
 
 const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const flexBetween = "flex items-center justify-between";
-    const navBarBackground = isTopOfPage ? "" : "bg-[#1E425E] drop-shadow"
+    const navBarBackground = isTopOfPage ? "bg-[#1E425E]" : "bg-[#1E425E]/50 backdrop-blur-md"
+
     return (
         <nav>
             <div className={`${navBarBackground} ${flexBetween} fixed top-0 z-40 w-full py-6`}>
                 <div className={`${flexBetween} mx-auto w-3/4`}>
                     <div className={`${flexBetween} w-full gap-32`}>
                         { /* LOGO */}
-                        <img src={Logo} alt="logo" />
+
+                        <img
+                            src={Logo}
+                            alt="logo"
+                            className="cursor-pointer"
+                            onClick={() => {
+                                setSelectedPage(SelectedPage.HOME)
+                                document.getElementById(SelectedPage.HOME)?.scrollIntoView({
+                                    behavior: "smooth",
+                                })
+                            }}
+                        />
 
                         { /* Nav items */}
                         <div className={`${flexBetween} w-full`}>
