@@ -23,9 +23,10 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         <div className={`${flexBetween} w-full`}>
                             <div className={`${flexBetween} gap-8 text-sm font-bold`}>
 
-                                <Link page="Om oss" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                <Link page="Tjenester" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                <Link page="Kontakt oss" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                             </div>
                         </div>
                     </div>

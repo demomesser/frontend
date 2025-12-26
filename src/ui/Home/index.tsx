@@ -1,5 +1,7 @@
-import type { SelectedPage } from "../../shared/types";
+import { SelectedPage } from "../../shared/types";
 import HomePagePicture from "../../assets/homepage.jpg"
+
+import { motion } from "framer-motion"
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -7,8 +9,8 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
     return (
-        <section id="home" className='relative w-screen min-h-screen overflow-hidden'>
-            <div className="flex w-full justify-center items-center mt-16">
+        <section id={SelectedPage.HOME} className='relative w-screen min-h-screen overflow-hidden'>
+            <motion.div className="flex w-full justify-center items-center mt-16" onViewportEnter={()=> setSelectedPage(SelectedPage.HOME)}>
 
                 {/* Bakground */}
                 <div className="absolute inset-0 bg-[#1E425E]" />
@@ -25,7 +27,7 @@ const Home = ({ setSelectedPage }: Props) => {
                         Et selskap som bidrar til det Grønne skiftet, med kunnskaps deling
                     </h1>
                 </div>
-            </div>
+            </motion.div>
 
         </section >
     )

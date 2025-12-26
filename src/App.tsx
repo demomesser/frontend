@@ -1,5 +1,7 @@
 import Header from "./ui/Header"
 import Home from "./ui/Home"
+
+import AboutUs from "./ui/aboutUs";
 import Footer from "./ui/Footer"
 import { SelectedPage } from "./shared/types";
 import { useEffect, useState } from "react";
@@ -25,6 +27,7 @@ const App = () => {
         <div className='app bg-black-20'>
             <Header isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
             <Home setSelectedPage={setSelectedPage} />
+            <AboutUs setSelectedPage={setSelectedPage} />
             <Footer />
         </div>
 

@@ -1,5 +1,6 @@
 export enum SelectedPage {
-    HOME = "home",
-    SERVICES = "tjenester",
-    CONTACT = "contact"
+    HOME = "Hjem",
+    ABOUTUS = "Om oss",
+    SERVICES = "Tjenester",
+    CONTACT = "Kontakt oss"
 }
