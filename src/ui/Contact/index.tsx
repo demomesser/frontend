@@ -27,7 +27,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                         Kontakt oss
                     </h1>
 
-                    <form method="POST" className="flex flex-col gap-5">
+                    <form method="POST" className="flex flex-col gap-5" action="https://formsubmit.co/erik.munkelien@demomesser.no">
                         <input
                             type="text"
                             name="name"
