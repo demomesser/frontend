@@ -27,10 +27,16 @@ const Home = ({ setSelectedPage }: Props) => {
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <img
                         src={Logo}
-                        alt="Icon"
-                        className="cursor-pointer w-64 h-auto"
+                        alt="Logo"
+                        className="
+                            w-72 
+                            md:w-96 
+                            lg:w-[28rem] 
+                            h-auto 
+                            mb-10
+                        "
                     />
-                    <h1 className="text-2xl md:text-4xl font-bold">
+                    <h1 className="max-w-4xl text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                         Et selskap som bidrar til det Grønne skiftet, med kunnskaps deling
                     </h1>
                 </div>
