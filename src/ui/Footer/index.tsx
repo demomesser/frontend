@@ -1,4 +1,4 @@
-import { FaFacebookF } from "react-icons/fa"
+import { FaFacebookF, FaLinkedin } from "react-icons/fa"
 
 const Footer = () => {
     return (
@@ -14,6 +14,15 @@ const Footer = () => {
                         aria-label="Facebook"
                     >
                         <FaFacebookF size={24} />
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/company/demomesser-as/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-[#EDFA8B] transition"
+                        aria-label="Linkedin"
+                    >
+                        <FaLinkedin size={24} />
                     </a>
                 </div>
             </div>
