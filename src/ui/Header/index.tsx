@@ -1,4 +1,4 @@
-import Logo from "../../assets/icon.png"
+import Icon from "../../assets/icon.png"
 import { SelectedPage } from "../../shared/types";
 import Link from "./link";
 
@@ -20,9 +20,9 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         { /* LOGO */}
 
                         <img
-                            src={Logo}
-                            alt="logo"
-                            className="cursor-pointer"
+                            src={Icon}
+                            alt="Icon"
+                            className="cursor-pointer w-16 h-auto"
                             onClick={() => {
                                 setSelectedPage(SelectedPage.HOME)
                                 document.getElementById(SelectedPage.HOME)?.scrollIntoView({
