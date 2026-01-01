@@ -15,14 +15,14 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     return (
         <nav>
             <div className={`${navBarBackground} ${flexBetween} fixed top-0 z-40 w-full py-6`}>
-                <div className={`${flexBetween} mx-auto w-3/4`}>
+                <div className={`${flexBetween} mx-auto w-1/2`}>
                     <div className={`${flexBetween} w-full gap-32`}>
                         { /* LOGO */}
 
                         <img
                             src={Icon}
                             alt="Icon"
-                            className="cursor-pointer w-16 h-auto"
+                            className="cursor-pointer w-8 h-auto"
                             onClick={() => {
                                 setSelectedPage(SelectedPage.HOME)
                                 document.getElementById(SelectedPage.HOME)?.scrollIntoView({

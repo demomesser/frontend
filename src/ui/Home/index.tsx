@@ -29,11 +29,9 @@ const Home = ({ setSelectedPage }: Props) => {
                         src={Logo}
                         alt="Logo"
                         className="
-                            w-72 
-                            md:w-96 
-                            lg:w-[28rem] 
+                            w-100
                             h-auto 
-                            mb-10
+                            mb-2
                         "
                     />
                     <h1 className="max-w-4xl text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">

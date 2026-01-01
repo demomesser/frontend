@@ -29,7 +29,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 onViewportEnter={() => setSelectedPage(SelectedPage.CONTACT)}
             >
                 <motion.div
-                    className="grid w-full max-w-5xl grid-cols-1 gap-12 md:grid-cols-2 items-center"
+                    className="grid w-full max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 items-center"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
