@@ -11,18 +11,21 @@ type Props = {
 const Home = ({ setSelectedPage }: Props) => {
     return (
         <section id={SelectedPage.HOME} className='relative w-screen min-h-screen overflow-hidden'>
-            <motion.div className="flex w-full justify-center items-center mt-16" onViewportEnter={() => setSelectedPage(SelectedPage.HOME)}>
 
-                {/* Bakground */}
-                <div className="absolute inset-0 bg-[#1E425E]" />
+            {/* Bakground */}
+            <div className="absolute inset-0 bg-[#1E425E]" />
 
-                {/* IMAGE */}
-                <img
-                    src={HomePagePicture}
-                    alt="home-pageGraphic"
-                    className="absolute inset-0 w-full h-full object-cover opacity-10"
-                />
+            {/* IMAGE */}
+            <img
+                src={HomePagePicture}
+                alt="home-pageGraphic"
+                className="absolute inset-0 w-full h-full object-cover opacity-5"
+            />
 
+            <motion.div
+                onViewportEnter={() => setSelectedPage(SelectedPage.HOME)}
+                className="relative z-10 flex min-h-screen items-center justify-center px-6"
+            >
                 {/* TEXT OVERLAY */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                     <img
@@ -34,9 +37,9 @@ const Home = ({ setSelectedPage }: Props) => {
                             mb-2
                         "
                     />
-                    <h1 className="max-w-4xl text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                        Et selskap som bidrar til det Grønne skiftet, med kunnskaps deling
-                    </h1>
+                <p className="mt-8 text-m">
+                    Et selskap som bidrar til det grønne skiftet, med kunnskaps deling
+                </p>
                 </div>
             </motion.div>
 
