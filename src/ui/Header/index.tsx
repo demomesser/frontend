@@ -27,7 +27,7 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         <img
                             src={Icon}
                             alt="Icon"
-                            className="cursor-pointer w-8 h-auto"
+                            className="cursor-pointer w-12 h-auto"
                             onClick={() => {
                                 setSelectedPage(SelectedPage.HOME)
                                 document.getElementById(SelectedPage.HOME)?.scrollIntoView({
@@ -38,7 +38,7 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
                         { /* Nav items */}
                         {isAboveMediumScreens ? (<div className={`${flexBetween} w-full`}>
-                            <div className={`${flexBetween} gap-8 text-sm font-bold`}>
+                            <div className={`${flexBetween} gap-8 text-lg font-bold`}>
 
                                 <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                 <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
@@ -46,8 +46,8 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                 <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                             </div>
                         </div>) : (
-                            <button className="rounded-full bg-secondary-500 p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                <Bars3Icon className="h-6 w-6 text-white" />
+                            <button className="rounded-full bg-[#EDFA8B] p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                                <Bars3Icon className="h-6 w-6 text-[#407053]" />
                             </button>
                         )}
                     </div>

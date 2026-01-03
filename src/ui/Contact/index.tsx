@@ -19,15 +19,21 @@ const Contact = ({ setSelectedPage }: Props) => {
         >
             {/* Background */}
             <motion.div
-                className="absolute inset-0 bg-[#256670]"
+                className="absolute inset-0 bg-[#1E425E]"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
             />
 
+
+
             <motion.div
-                className="relative z-10 flex min-h-screen items-center justify-center px-6"
+                className="relative z-10 flex min-h-screen flex-col items-center px-6 pt-8"
                 onViewportEnter={() => setSelectedPage(SelectedPage.CONTACT)}
             >
+                <h1 className="mb-12 text-4xl font-bold text-primary-500">
+                    Kontakt oss
+                </h1>
+
                 <motion.div
                     className="grid w-full max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 items-center"
                     initial="hidden"
@@ -40,6 +46,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                         }
                     }}
                 >
+
                     {/* LEFT — FORM */}
                     <motion.div
                         variants={{
@@ -47,9 +54,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                             visible: { opacity: 1, x: 0 }
                         }}
                     >
-                        <h1 className="mb-6 text-2xl font-bold text-primary-500">
-                            Kontakt oss
-                        </h1>
+
 
                         <form
                             method="POST"
@@ -100,7 +105,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                         >
                             {/* Image */}
                             <motion.div
-                                className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-[#EDFA8B]"
+                                className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-[#256670]"
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 transition={{ type: "spring", stiffness: 120 }}
@@ -132,7 +137,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                         >
                             {/* Image */}
                             <motion.div
-                                className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-[#EDFA8B]"
+                                className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-[#256670]"
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 transition={{ type: "spring", stiffness: 120 }}

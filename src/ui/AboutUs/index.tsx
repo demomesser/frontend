@@ -1,5 +1,7 @@
 import { SelectedPage } from "../../shared/types";
 
+import AboutImg from "../../assets/image3.jpg"
+
 import { motion } from "framer-motion"
 
 type Props = {
@@ -8,27 +10,53 @@ type Props = {
 
 const AboutUs = ({ setSelectedPage }: Props) => {
     return (
-        <section id={SelectedPage.ABOUTUS} className='relative w-screen min-h-screen overflow-hidden'>
-            <motion.div className="flex w-full justify-center items-center mt-16" onViewportEnter={() => setSelectedPage(SelectedPage.ABOUTUS)}>
-                <div className="absolute inset-0 bg-[#256670]" />
-                {/* TEXT OVERLAY */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <h1 className="mb-6 text-2xl font-bold text-primary-500">
-                        Om oss
-                    </h1>
-                    <p className='text-sm mb-4 px-64'>
-                        Demomesser as er et resultat av mangel på arenaer for testing og prøving!
-                        Tradisjonelle messer gir som oftest publikum bare kjennskap og lite kunnskap om
-                        produktets kvalitet og bruks område. Med søkelys på bærekraft, miljø og et
-                        samfunnsansvar arrangerer vi kun messer med null utslipps utstyr og maskiner.
-                    </p>
+        <section
+            id={SelectedPage.ABOUTUS}
+            className="relative w-screen min-h-screen bg-white scroll-mt-24"
+        >
+            <motion.div
+                className="relative mx-auto max-w-6xl px-6 pt-8"
+                onViewportEnter={() => setSelectedPage(SelectedPage.ABOUTUS)}
+            >
+                {/* HEADER */}
+                <h1 className="mb-8 text-4xl font-bold text-[#1E425E]">
+                    Om oss
+                </h1>
 
-                    <p className="text-sm px-64">
-                        Vi som jobber i demomesser, har lang erfaring i arbeidslivet og har vært med hele
-                        veien mot det Grønne skiftet fra dag 1. Med kunnskap om konsekvenser og
-                        muligheter er vi i stand til å gi leverandører og publikum gode råd om hvordan man
-                        skal formidle «budskapet»!
-                    </p>
+                {/* COLORED BOX */}
+                <div className="rounded-xl bg-[#1E425E] p-10 shadow-lg">
+                    <div className="grid grid-cols-1 gap-10 md:grid-cols-2 items-center">
+                        
+                        {/* LEFT — TEXT */}
+                        <div className="text-white text-base leading-relaxed space-y-4">
+                            <p>
+                                Demomesser AS er et resultat av mangel på arenaer for testing og prøving.
+                                Tradisjonelle messer gir som oftest publikum bare kjennskap og lite
+                                kunnskap om produktets kvalitet og bruksområde.
+                            </p>
+
+                            <p>
+                                Med søkelys på bærekraft, miljø og samfunnsansvar arrangerer vi kun
+                                messer med nullutslippsutstyr og maskiner.
+                            </p>
+
+                            <p>
+                                Vi som jobber i Demomesser har lang erfaring i arbeidslivet og har vært
+                                med hele veien mot det grønne skiftet. Med kunnskap om konsekvenser og
+                                muligheter gir vi både leverandører og publikum gode råd.
+                            </p>
+                        </div>
+
+                        {/* RIGHT — IMAGE */}
+                        <div className="flex justify-center">
+                            <img
+                                src={AboutImg}
+                                alt="Om Demomesser"
+                                className="max-h-80 w-full rounded-lg object-cover shadow-md"
+                            />
+                        </div>
+
+                    </div>
                 </div>
             </motion.div>
         </section>

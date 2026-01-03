@@ -1,4 +1,4 @@
-import { SelectedPage } from "../../shared/types";
+import { SelectedPage } from "../../shared/types"
 
 import { motion } from "framer-motion"
 
@@ -15,7 +15,7 @@ const Services = ({ setSelectedPage }: Props) => {
             className="relative w-screen min-h-screen overflow-hidden"
         >
             <motion.div
-                className="relative flex flex-col w-full min-h-screen items-center justify-center text-center px-6"
+                className="relative flex flex-col w-full min-h-screen items-center text-center px-6 pt-32"
                 onViewportEnter={() => setSelectedPage(SelectedPage.SERVICES)}
                 initial="hidden"
                 whileInView="visible"
@@ -32,7 +32,7 @@ const Services = ({ setSelectedPage }: Props) => {
 
                 {/* Heading */}
                 <motion.h1
-                    className="mb-6 text-2xl font-bold text-primary-500"
+                    className="mb-6 text-4xl font-bold text-primary-500"
                     variants={{
                         hidden: { opacity: 0, y: -20 },
                         visible: { opacity: 1, y: 0 }
