@@ -4,6 +4,7 @@ import Icon from "../../assets/icon.png"
 import { SelectedPage } from "../../shared/types";
 import Link from "./link";
 import useMediaQuery from "../../shared/useMedia";
+import ActionButton from "../../shared/ActionButton"
 
 type Props = {
     isTopOfPage: Boolean
@@ -20,36 +21,52 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     return (
         <nav>
             <div className={`${navBarBackground} ${flexBetween} fixed top-0 z-40 w-full py-6`}>
-                <div className={`${flexBetween} mx-auto w-1/2`}>
-                    <div className={`${flexBetween} w-full gap-32`}>
-                        { /* LOGO */}
+                <div className="mx-auto w-full max-w-7xl px-6">
+                    <div className="grid w-full grid-cols-3 items-center">
 
-                        <img
-                            src={Icon}
-                            alt="Icon"
-                            className="cursor-pointer w-12 h-auto"
-                            onClick={() => {
-                                setSelectedPage(SelectedPage.HOME)
-                                document.getElementById(SelectedPage.HOME)?.scrollIntoView({
-                                    behavior: "smooth",
-                                })
-                            }}
-                        />
+                        { /* LOGO */}
+                        <div className="flex justify-start">
+                            <img
+                                src={Icon}
+                                alt="Icon"
+                                className="cursor-pointer w-12 h-auto"
+                                onClick={() => {
+                                    setSelectedPage(SelectedPage.HOME)
+                                    document.getElementById(SelectedPage.HOME)?.scrollIntoView({
+                                        behavior: "smooth",
+                                    })
+                                }}
+                            />
+                        </div>
 
                         { /* Nav items */}
-                        {isAboveMediumScreens ? (<div className={`${flexBetween} w-full`}>
-                            <div className={`${flexBetween} gap-8 text-lg font-bold`}>
+                        <div className="flex justify-center">
+                            {isAboveMediumScreens ? (
+                                <div className={"flex gap-8 text-lg font-bold"}>
+                                    <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                </div>
+                            ) : (
+                                <button className="rounded-full bg-[#EDFA8B] p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                                    <Bars3Icon className="h-6 w-6 text-[#407053]" />
+                                </button>
+                            )}
 
-                                <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                            </div>
-                        </div>) : (
-                            <button className="rounded-full bg-[#EDFA8B] p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                <Bars3Icon className="h-6 w-6 text-[#407053]" />
-                            </button>
-                        )}
+                        </div>
+
+                        { /* Button */}
+                        <div className="flex justify-end">
+                            {isAboveMediumScreens && !isTopOfPage && (
+                                <ActionButton
+                                    page={SelectedPage.ARRANGEMENT}
+                                    setSelectedPage={setSelectedPage}
+                                >
+                                    Arrangement
+                                </ActionButton>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

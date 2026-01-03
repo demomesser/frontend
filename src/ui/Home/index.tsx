@@ -12,7 +12,7 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
     return (
-        <section id={SelectedPage.HOME} className='relative w-screen min-h-screen overflow-hidden'>
+        <section id={SelectedPage.HOME} className='relative w-screen min-h-screen overflow-hidden px-6'>
 
             {/* Bakground */}
             <div className="absolute inset-0 bg-[#1E425E]" />
