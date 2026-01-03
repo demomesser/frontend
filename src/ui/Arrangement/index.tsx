@@ -20,7 +20,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
             >
 
                 {/* HEADER */}
-                <div className="mb-12 pt-12 text-center">
+                <div className="mb-12 pt-12 text-center mx-4">
                     <h2 className="text-4xl font-bold text-[#1E425E]">
                         Kommende arrangementer
                     </h2>
@@ -29,7 +29,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                 </div>
 
                 {/* EVENTS */}
-                <div className="rounded-lg bg-[#1E425E] p-6 text-white shadow-md">
+                <div className="rounded-lg bg-[#1E425E] p-6 text-white shadow-md m-6">
 
                     {/* DATE */}
                     <div className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#EDFA8B]">
@@ -66,7 +66,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                     </p>
                 </div>
 
-                <div className="rounded-lg bg-[#1E425E] p-6 text-white shadow-md mt-4">
+                <div className="rounded-lg bg-[#1E425E] p-6 text-white shadow-md m-6">
 
                     {/* DATE */}
                     <div className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#EDFA8B]">

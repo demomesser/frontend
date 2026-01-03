@@ -48,16 +48,18 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                     <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                     <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                 </div>
-                            ) : (
-                                <button className="rounded-full bg-[#EDFA8B] p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                    <Bars3Icon className="h-6 w-6 text-[#407053]" />
-                                </button>
-                            )}
+                            ) : null}
 
                         </div>
 
                         { /* Button */}
                         <div className="flex justify-end">
+                            {!isAboveMediumScreens ? (
+                                <button className="rounded-full bg-[#EDFA8B] p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                                    <Bars3Icon className="h-6 w-6 text-[#407053]" />
+                                </button>
+                            ) : null}
+
                             {isAboveMediumScreens && !isTopOfPage && (
                                 <ActionButton
                                     page={SelectedPage.ARRANGEMENT}
@@ -85,6 +87,7 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        <Link page={SelectedPage.ARRANGEMENT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                     </div>
                 </div>

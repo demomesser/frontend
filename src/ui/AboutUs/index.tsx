@@ -24,7 +24,7 @@ const AboutUs = ({ setSelectedPage }: Props) => {
                 </h1>
 
                 {/* COLORED BOX */}
-                <div className="rounded-xl bg-[#1E425E] p-10 shadow-lg">
+                <div className="rounded-xl bg-[#1E425E] p-10 shadow-lg mb-6">
                     <div className="grid grid-cols-1 gap-10 md:grid-cols-2 items-center">
                         
                         {/* LEFT — TEXT */}

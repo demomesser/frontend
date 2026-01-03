@@ -55,7 +55,7 @@ const Services = ({ setSelectedPage }: Props) => {
 
                 {/* CARDS */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full px-6"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full px-6 m-8"
                 >
                     {/* Card 1 */}
                     <motion.div

@@ -27,7 +27,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 
 
             <motion.div
-                className="relative z-10 flex min-h-screen flex-col items-center px-6 pt-8"
+                className="relative z-10 flex flex-col items-center px-4 pt-6 md:px-6 md:pt-8"
                 onViewportEnter={() => setSelectedPage(SelectedPage.CONTACT)}
             >
                 <h1 className="mb-12 text-4xl font-bold text-primary-500">
@@ -93,7 +93,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 
                     {/* RIGHT — CEO CARD */}
                     <motion.div
-                        className="flex gap-4 justify-center"
+                        className="flex flex-col gap-6 items-center md:flex-row md:gap-4 md:justify-center"
                         variants={{
                             hidden: { opacity: 0, x: 40 },
                             visible: { opacity: 1, x: 0 }
