@@ -35,17 +35,20 @@ const Home = ({ setSelectedPage }: Props) => {
                         alt="Logo"
                         className="
                             w-100
-                            h-auto 
-                            mb-2
+                            h-auto
                         "
                     />
-                    <p className="mt-8 text-m">
+                    <p className="mt-12 text-lg">
                         Et selskap som bidrar til det grønne skiftet, med kunnskaps deling
                     </p>
-                    <ActionButton page={SelectedPage.CONTACT} setSelectedPage={setSelectedPage}>
-                        Arrangement
-                    </ActionButton>
+                    <div className="mt-16">
+                        <ActionButton page={SelectedPage.CONTACT} setSelectedPage={setSelectedPage}>
+                            Arrangement
+                        </ActionButton>
+                    </div>
+
                 </div>
+
             </motion.div>
 
         </section >
