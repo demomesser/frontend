@@ -42,7 +42,7 @@ const Home = ({ setSelectedPage }: Props) => {
                         Et selskap som bidrar til det grønne skiftet, med kunnskaps deling
                     </p>
                     <div className="mt-16">
-                        <ActionButton page={SelectedPage.CONTACT} setSelectedPage={setSelectedPage}>
+                        <ActionButton page={SelectedPage.ARRANGEMENT} setSelectedPage={setSelectedPage}>
                             Arrangement
                         </ActionButton>
                     </div>
