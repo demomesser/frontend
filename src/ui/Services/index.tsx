@@ -7,6 +7,8 @@ type Props = {
 }
 
 const Services = ({ setSelectedPage }: Props) => {
+    const motionScale = 1.2
+    const bgBox = "#EDFA8B"
     return (
         <section
             id={SelectedPage.SERVICES}
@@ -62,7 +64,7 @@ const Services = ({ setSelectedPage }: Props) => {
                             hidden: { opacity: 0, y: 30 },
                             visible: { opacity: 1, y: 0 }
                         }}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: motionScale, backgroundColor: bgBox }}
                     >
                         <h2 className="mb-3 text-lg font-bold text-[#1E425E]">
                             Bærekraft
@@ -81,7 +83,7 @@ const Services = ({ setSelectedPage }: Props) => {
                             hidden: { opacity: 0, y: 30 },
                             visible: { opacity: 1, y: 0 }
                         }}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: motionScale, backgroundColor: bgBox }}
                     >
                         <h2 className="mb-3 text-lg font-bold text-[#1E425E]">
                             Kunnskapsdeling
@@ -100,7 +102,7 @@ const Services = ({ setSelectedPage }: Props) => {
                             hidden: { opacity: 0, y: 30 },
                             visible: { opacity: 1, y: 0 }
                         }}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: motionScale, backgroundColor: bgBox }}
                     >
                         <h2 className="mb-3 text-lg font-bold text-[#1E425E]">
                             Innovasjon

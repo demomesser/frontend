@@ -2,6 +2,8 @@ import { SelectedPage } from "../../shared/types";
 import HomePagePicture from "../../assets/homepage.jpg"
 import Logo from "../../assets/logo.png"
 
+import ActionButton from "../../shared/ActionButton"
+
 import { motion } from "framer-motion"
 
 type Props = {
@@ -37,9 +39,12 @@ const Home = ({ setSelectedPage }: Props) => {
                             mb-2
                         "
                     />
-                <p className="mt-8 text-m">
-                    Et selskap som bidrar til det grønne skiftet, med kunnskaps deling
-                </p>
+                    <p className="mt-8 text-m">
+                        Et selskap som bidrar til det grønne skiftet, med kunnskaps deling
+                    </p>
+                    <ActionButton page={SelectedPage.CONTACT} setSelectedPage={setSelectedPage}>
+                        Arrangement
+                    </ActionButton>
                 </div>
             </motion.div>
 

@@ -3,7 +3,7 @@ import { SelectedPage } from "../../shared/types"
 type Props = {
     page: SelectedPage,
     selectedPage: SelectedPage,
-    setSelectedPage: (value: SelectedPage) => void;
+    setSelectedPage: (value: SelectedPage) => void
 }
 
 const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
