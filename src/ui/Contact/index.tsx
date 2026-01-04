@@ -34,7 +34,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 </h1>
 
                 <motion.div
-                    className="grid w-full max-w-5xl grid-cols-2 gap-6 md:grid-cols-2 items-center"
+                    className="grid w-full max-w-5xl grid-cols-1 gap-6 items-center md:grid-cols-3"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -48,6 +48,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 
                     {/* LEFT — FORM */}
                     <motion.div
+                        className="md:col-span-2"
                         variants={{
                             hidden: { opacity: 0, x: -40 },
                             visible: { opacity: 1, x: 0 }
