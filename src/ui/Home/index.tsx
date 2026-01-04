@@ -43,7 +43,7 @@ const Home = ({ setSelectedPage }: Props) => {
                     </p>
                     <div className="mt-16">
                         <ActionButton page={SelectedPage.ARRANGEMENT} setSelectedPage={setSelectedPage}>
-                            Arrangement
+                            Arrangementer
                         </ActionButton>
                     </div>
 
