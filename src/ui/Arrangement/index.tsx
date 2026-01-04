@@ -76,7 +76,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                     <div className="flex items-center justify-between gap-16">
                         <div>
                             <h3 className="text-xl font-bold leading-tight">
-                                Demomesse i Østre gravlund 
+                                Demomesse på Østre gravlund 
                             </h3>
 
                             <p className="mt-1 text-xs text-gray-300">
