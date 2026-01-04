@@ -24,12 +24,12 @@ const Home = ({ setSelectedPage }: Props) => {
 
             {/* Bakground */}
             <div className="
-  absolute inset-0 z-0
-  bg-gradient-to-br
-  from-[#1E425E]/80
-  via-[#256670]/95
-  to-[#EDF4B8]/70
-" />
+                absolute inset-0 z-0
+                bg-gradient-to-br
+                from-[#1E425E]/80
+                via-[#256670]/95
+                to-[#EDF4B8]/70
+            " />
 
             <motion.div
                 onViewportEnter={() => setSelectedPage(SelectedPage.HOME)}
