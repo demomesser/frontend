@@ -39,11 +39,11 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                     <div className="flex items-center justify-between gap-16">
                         <div>
                             <h3 className="text-xl font-bold leading-tight">
-                                Demomesse i Haleen Parken
+                                Demomesse i Hallén Parken
                             </h3>
 
                             <p className="mt-1 text-xs text-gray-300">
-                                Sammen med Utvikling og kompetanseenheten i Oslo kommune
+                                UKE (Utvikling og kompetanseetaten i Oslo Kommune)
                             </p>
                         </div>
 
@@ -76,16 +76,16 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                     <div className="flex items-center justify-between gap-16">
                         <div>
                             <h3 className="text-xl font-bold leading-tight">
-                                Demomesse i Vestre gravlund 
+                                Demomesse i Østre gravlund 
                             </h3>
 
                             <p className="mt-1 text-xs text-gray-300">
-                                sammen med Gravferdsetaten i Oslo Kommune.
+                                GPE (Gravplassetaten i Oslo Kommune)
                             </p>
                         </div>
 
                         <a
-                            href="https://www.google.com/maps/place/Vestre+Gravlund/@59.9344716,10.693367,18.07z/data=!4m6!3m5!1s0x46416d59fa5840fd:0xb716224026a2cd77!8m2!3d59.9344843!4d10.6944431!16s%2Fm%2F05m_5cz?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
+                            href="https://www.google.com/maps/place/%C3%98stre+gravlund/@59.9131596,10.8070007,17z/data=!3m1!4b1!4m6!3m5!1s0x46416fac1956fe17:0x551ef06362a130bf!8m2!3d59.9131575!4d10.8089872!16s%2Fg%2F120z70wv?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="shrink-0 inline-flex items-center gap-1 text-xs text-gray-300 hover:text-[#EDFA8B]"
