@@ -17,6 +17,15 @@ const AboutUs = ({ setSelectedPage }: Props) => {
             <motion.div
                 className="relative mx-auto max-w-6xl px-6 pt-8"
                 onViewportEnter={() => setSelectedPage(SelectedPage.ABOUTUS)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.8 }}
+                variants={{
+                    hidden: {},
+                    visible: {
+                        transition: { staggerChildren: 1.2 }
+                    }
+                }}
             >
                 {/* HEADER */}
                 <h1 className="mb-8 text-center text-4xl font-bold text-[#1E425E]">
@@ -26,9 +35,15 @@ const AboutUs = ({ setSelectedPage }: Props) => {
                 {/* COLORED BOX */}
                 <div className="rounded-xl bg-[#1E425E] p-10 shadow-lg mb-6">
                     <div className="grid grid-cols-1 gap-10 md:grid-cols-2 items-center">
-                        
+
                         {/* LEFT — TEXT */}
-                        <div className="text-white text-base leading-relaxed space-y-4">
+                        <motion.div
+                            className="text-white text-base leading-relaxed space-y-4"
+                            variants={{
+                                hidden: { opacity: 0, x: -40 },
+                                visible: { opacity: 1, x: 0 }
+                            }}
+                        >
                             <p>
                                 Demomesser AS er et resultat av mangel på arenaer for testing og prøving.
                                 Tradisjonelle messer gir som oftest publikum bare kjennskap og lite
@@ -45,7 +60,7 @@ const AboutUs = ({ setSelectedPage }: Props) => {
                                 med hele veien mot det grønne skiftet. Med kunnskap om konsekvenser og
                                 muligheter gir vi både leverandører og publikum gode råd.
                             </p>
-                        </div>
+                        </motion.div>
 
                         {/* RIGHT — IMAGE */}
                         <div className="flex justify-center">
@@ -55,7 +70,6 @@ const AboutUs = ({ setSelectedPage }: Props) => {
                                 className="max-h-80 w-full rounded-lg object-cover shadow-md"
                             />
                         </div>
-
                     </div>
                 </div>
             </motion.div>
