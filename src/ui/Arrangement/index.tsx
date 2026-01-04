@@ -1,5 +1,8 @@
 import { SelectedPage } from "../../shared/types";
 
+import halleninv from "../../assets/halleninv.pdf"
+import DownloadButton from "../../shared/DownloadButton"
+
 import { MapPinIcon } from "@heroicons/react/24/solid"
 
 import { motion } from "framer-motion"
@@ -46,7 +49,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                                 UKE (Utvikling og kompetanseetaten i Oslo Kommune)
                             </p>
                         </div>
-
+                        <DownloadButton file={halleninv} label={"Invitasjon"} filename={"invitasjon.pdf"} />
                         <a
                             href="https://www.google.com/maps/place/Hall%C3%A9nparken/@59.9308018,10.7623102,18z/data=!3m1!4b1!4m6!3m5!1s0x46416e6baedbf21d:0xc1c6e3aa88446e41!8m2!3d59.9308006!4d10.7634634!16s%2Fg%2F1221x_tz?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
                             target="_blank"
@@ -83,7 +86,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                                 GPE (Gravplassetaten i Oslo Kommune)
                             </p>
                         </div>
-
+                        
                         <a
                             href="https://www.google.com/maps/place/%C3%98stre+gravlund/@59.9131596,10.8070007,17z/data=!3m1!4b1!4m6!3m5!1s0x46416fac1956fe17:0x551ef06362a130bf!8m2!3d59.9131575!4d10.8089872!16s%2Fg%2F120z70wv?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
                             target="_blank"
