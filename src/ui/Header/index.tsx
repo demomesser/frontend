@@ -65,7 +65,7 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                     page={SelectedPage.ARRANGEMENT}
                                     setSelectedPage={setSelectedPage}
                                 >
-                                    Arrangement
+                                    Arrangementer
                                 </ActionButton>
                             )}
                         </div>

@@ -3,5 +3,5 @@ export enum SelectedPage {
     ABOUTUS = "Om oss",
     SERVICES = "Tjenester",
     CONTACT = "Kontakt oss",
-    ARRANGEMENT = "Arrangement"
+    ARRANGEMENT = "Arrangementer"
 }
