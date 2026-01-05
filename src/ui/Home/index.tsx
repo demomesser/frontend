@@ -13,8 +13,6 @@ type Props = {
 const Home = ({ setSelectedPage }: Props) => {
     return (
         <section id={SelectedPage.HOME} className='relative w-screen min-h-screen overflow-hidden px-6'>
-
-
             {/* IMAGE */}
             <img
                 src={HomePagePicture}
