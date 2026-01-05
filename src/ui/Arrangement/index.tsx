@@ -41,7 +41,8 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                         15. april 2026
                     </div>
 
-                    <div className="flex items-center justify-between gap-16">
+
+                    <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                         <div>
                             <h3 className="text-xl font-bold leading-tight">
                                 Demomesse i Hallén Parken
@@ -78,10 +79,10 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                         8. mai 2026
                     </div>
 
-                    <div className="flex items-center justify-between gap-16">
+                    <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                         <div>
                             <h3 className="text-xl font-bold leading-tight">
-                                Demomesse på Østre gravlund 
+                                Demomesse på Østre gravlund
                             </h3>
 
                             <p className="mt-1 text-xs text-gray-300">
@@ -103,7 +104,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                     {/* DESCRIPTION */}
                     <p className="mt-4 text-base leading-relaxed text-gray-100">
                         23 leverandører av elektrisk utstyr og maskiner viser og demonstrerer
-                        for alle som holder kirkegårder, parker, veier og borretslag i orden. 
+                        for alle som holder kirkegårder, parker, veier og borretslag i orden.
                         Det vil selvfølgelig være muligheter for publikum å teste maskinene.
                     </p>
                 </div>
