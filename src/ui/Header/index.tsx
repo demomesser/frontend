@@ -4,7 +4,7 @@ import Icon from "../../assets/icon.png"
 import { SelectedPage } from "../../shared/types";
 import Link from "./link";
 import useMediaQuery from "../../shared/useMedia";
-import RegularButton from "../../shared/RegularButton"
+import ActionButton from "../../shared/ActionButton"
 
 type Props = {
     isTopOfPage: Boolean
@@ -17,9 +17,6 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const navBarBackground = isTopOfPage ? "bg-[#1E425E]" : "bg-[#1E425E]/50 backdrop-blur-md"
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-
-    const registrationLink = "https://cred.pameldingssystem.no/demo-messe"
-
 
     return (
         <nav>
@@ -67,9 +64,12 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                             )}
 
                             {isAboveMediumScreens && !isTopOfPage && (
-                                <RegularButton link={registrationLink}>
-                                    Påmelding
-                                </RegularButton>
+                                <ActionButton
+                                    page={SelectedPage.ARRANGEMENT}
+                                    setSelectedPage={setSelectedPage}
+                                >
+                                    Påmeldinger
+                                </ActionButton>
                             )}
                         </div>
 

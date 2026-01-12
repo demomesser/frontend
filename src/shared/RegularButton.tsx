@@ -1,17 +1,18 @@
 type Props = {
     link: string
-    children: React.ReactNode;
+    label: string
 };
 
-const RegularButton = ({ link, children }: Props) => {
+const RegularButton = ({ link, label }: Props) => {
     return (
         <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-[#EDFA8B] px-10 py-2 hover:bg-[#EDFA8B] text-[#407053] inline-block"
         >
-            {children}
+            <button className="rounded-full bg-[#EDFA8B] px-4 py-2 text-[#407053] cursor-pointer">
+                {label}
+            </button>
         </a>
     )
 }
