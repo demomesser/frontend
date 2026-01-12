@@ -4,7 +4,7 @@ import Icon from "../../assets/icon.png"
 import { SelectedPage } from "../../shared/types";
 import Link from "./link";
 import useMediaQuery from "../../shared/useMedia";
-import ActionButton from "../../shared/ActionButton"
+import RegularButton from "../../shared/RegularButton"
 
 type Props = {
     isTopOfPage: Boolean
@@ -18,71 +18,74 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
 
+    const registrationLink = "https://cred.pameldingssystem.no/demo-messe"
+
+
     return (
         <nav>
             <div className={`${navBarBackground} ${flexBetween} fixed top-0 z-40 w-full py-6`}>
                 <div className="mx-auto w-full max-w-7xl px-6">
-                    <div className="grid w-full grid-cols-3 items-center">
+                    <div className="flex w-full items-center">
 
-                        { /* LOGO */}
-                        <div className="flex justify-start">
+                        {/* LOGO */}
+                        <div className="flex items-center justify-start w-[200px]">
                             <img
                                 src={Icon}
                                 alt="Icon"
                                 className="cursor-pointer w-12 h-auto"
                                 onClick={() => {
-                                    setSelectedPage(SelectedPage.HOME)
+                                    setSelectedPage(SelectedPage.HOME);
                                     document.getElementById(SelectedPage.HOME)?.scrollIntoView({
                                         behavior: "smooth",
-                                    })
+                                    });
                                 }}
                             />
                         </div>
 
-                        { /* Nav items */}
-                        <div className="flex justify-center">
-                            {isAboveMediumScreens ? (
-                                <div className={"flex gap-8 text-lg font-bold"}>
+                        {/* NAV ITEMS */}
+                        <div className="flex flex-1 justify-center">
+                            {isAboveMediumScreens && (
+                                <div className="flex gap-10 text-lg font-semibold whitespace-nowrap">
                                     <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                     <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                     <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <Link page={SelectedPage.ARRANGEMENT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                     <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                 </div>
-                            ) : null}
-
-                        </div>
-
-                        { /* Button */}
-                        <div className="flex justify-end">
-                            {!isAboveMediumScreens ? (
-                                <button className="rounded-full bg-[#EDFA8B] p-2" onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                    <Bars3Icon className="h-6 w-6 text-[#407053]" />
-                                </button>
-                            ) : null}
-
-                            {isAboveMediumScreens && !isTopOfPage && (
-                                <ActionButton
-                                    page={SelectedPage.ARRANGEMENT}
-                                    setSelectedPage={setSelectedPage}
-                                >
-                                    Arrangementer
-                                </ActionButton>
                             )}
                         </div>
+
+                        {/* BUTTON */}
+                        <div className="flex items-center justify-end w-[200px]">
+                            {!isAboveMediumScreens && (
+                                <button
+                                    className="rounded-full bg-[#EDFA8B] p-2"
+                                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                                >
+                                    <Bars3Icon className="h-6 w-6 text-[#407053]" />
+                                </button>
+                            )}
+
+                            {isAboveMediumScreens && !isTopOfPage && (
+                                <RegularButton link={registrationLink}>
+                                    Påmelding
+                                </RegularButton>
+                            )}
+                        </div>
+
                     </div>
                 </div>
             </div>
-            { /* MOBILE MENU MODAL */}
+
+            {/* MOBILE MENU MODAL */}
             {!isAboveMediumScreens && isMenuToggled && (
                 <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-[#1E425E] drop-shadow-xl">
-                    { /* CLOSE ICON */}
                     <div className="flex justify-end p-12">
                         <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
                             <XMarkIcon className="h-6 w-6 text-gray-400" />
                         </button>
                     </div>
 
-                    { /* MENU ITEMS */}
                     <div className="ml-[33%] flex flex-col gap-10 text-2xl">
                         <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
@@ -93,7 +96,8 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 </div>
             )}
         </nav>
-    )
+    );
+
 }
 
 export default Header 

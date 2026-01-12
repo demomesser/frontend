@@ -2,7 +2,7 @@ import { SelectedPage } from "../../shared/types";
 import HomePagePicture from "../../assets/homepage.jpeg"
 import Logo from "../../assets/logo.png"
 
-import ActionButton from "../../shared/ActionButton"
+import RegularButton from "../../shared/RegularButton"
 
 import { motion } from "framer-motion"
 
@@ -11,6 +11,7 @@ type Props = {
 }
 
 const Home = ({ setSelectedPage }: Props) => {
+    const registrationLink = "https://cred.pameldingssystem.no/demo-messe"
     return (
         <section id={SelectedPage.HOME} className='relative w-screen min-h-screen overflow-hidden px-6'>
 
@@ -54,12 +55,9 @@ const Home = ({ setSelectedPage }: Props) => {
                     </p>
 
                     <div className="mt-16">
-                        <ActionButton
-                            page={SelectedPage.ARRANGEMENT}
-                            setSelectedPage={setSelectedPage}
-                        >
-                            Arrangementer
-                        </ActionButton>
+                        <RegularButton link={registrationLink}>
+                            Påmelding
+                        </RegularButton>
                     </div>
                 </motion.div>
             </motion.div>
