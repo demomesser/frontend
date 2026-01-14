@@ -15,7 +15,9 @@ type Props = {
 }
 
 const Arrangement = ({ setSelectedPage }: Props) => {
-    const registrationLink = "https://cred.pameldingssystem.no/demo-messe"
+    const registrationLink1 = "https://cred.pameldingssystem.no/demo-messe"
+    const registrationLink2 = "https://cred.pameldingssystem.no/demo-messe-1"
+
     return (
         <section
             id={SelectedPage.ARRANGEMENT}
@@ -65,7 +67,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                             />
 
                             <RegularButton
-                                link={registrationLink}
+                                link={registrationLink1}
                                 label={"Påmelding"}
                             >
                             </RegularButton>
@@ -111,6 +113,11 @@ const Arrangement = ({ setSelectedPage }: Props) => {
 
                         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                             <DownloadButton file={pdf2} label={"Invitasjon"} filename={"gravlund.pdf"} />
+                            <RegularButton
+                                link={registrationLink2}
+                                label={"Påmelding"}
+                            >
+                            </RegularButton>
 
                             <a
                                 href="https://www.google.com/maps/place/%C3%98stre+gravlund/@59.9131596,10.8070007,17z/data=!3m1!4b1!4m6!3m5!1s0x46416fac1956fe17:0x551ef06362a130bf!8m2!3d59.9131575!4d10.8089872!16s%2Fg%2F120z70wv?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D"
