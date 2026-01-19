@@ -7,7 +7,7 @@ import useMediaQuery from "../../shared/useMedia";
 import ActionButton from "../../shared/ActionButton"
 
 type Props = {
-    isTopOfPage: Boolean
+    isTopOfPage: boolean
     selectedPage: SelectedPage
     setSelectedPage: (value: SelectedPage) => void
 }
