@@ -27,7 +27,7 @@ const Homepage = () => {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
     return (
-        <div className='app bg-black-20'>
+        <div>
             <Header isTopOfPage={isTopOfPage} selectedPage={selectedPage} setSelectedPage={setSelectedPage}/>
             <Home setSelectedPage={setSelectedPage} />
             <AboutUs setSelectedPage={setSelectedPage} />

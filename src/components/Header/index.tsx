@@ -3,6 +3,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Icon from "../../assets/icon.png"
 import { SelectedPage } from "../../shared/types";
 import Link from "./link";
+import LinkRoute from "./linkRoute";
 import useMediaQuery from "../../shared/useMedia";
 import ActionButton from "../../shared/ActionButton"
 
@@ -43,7 +44,7 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         <div className="flex flex-1 justify-center">
                             {isAboveMediumScreens && (
                                 <div className="flex gap-10 text-lg font-semibold whitespace-nowrap">
-                                    <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                                    <LinkRoute label="Utstiller →" to="/utstiller" />
                                     <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                     <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                                     <Link page={SelectedPage.ARRANGEMENT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
