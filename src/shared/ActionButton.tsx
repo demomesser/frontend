@@ -1,29 +1,41 @@
-import { SelectedPage } from "./types"
+import { SelectedPage } from "./types";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Props = {
-    page: SelectedPage;
-    setSelectedPage: (value: SelectedPage) => void;
-    children: React.ReactNode;
+  page: SelectedPage;
+  setSelectedPage?: (value: SelectedPage) => void;
+  children: React.ReactNode;
 };
 
 const ActionButton = ({ page, setSelectedPage, children }: Props) => {
-    return (
-        <a
-            href={`#${page}`}
-            onClick={(e) => {
-                e.preventDefault();
-                setSelectedPage(page);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-                document.getElementById(page)?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                });
-            }}
-            className={"rounded-full bg-[#EDFA8B] px-10 py-2 hover:bg-[#EDFA8B] text-[#407053]"}
-        >
-            {children}
-        </a>
-    )
-}
+  const handleClick = () => {
+    // Optional state sync
+    setSelectedPage?.(page);
 
-export default ActionButton
+    // If already on homepage → scroll
+    if (location.pathname === "/") {
+      document.getElementById(page)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      return;
+    }
+
+    // Otherwise → go home with hash
+    navigate(`/#${page}`);
+  };
+
+  return (
+    <button
+      onClick={handleClick}
+      className="cursor-pointer rounded-full bg-[#EDFA8B] px-10 py-2 text-[#407053]"
+    >
+      {children}
+    </button>
+  );
+};
+
+export default ActionButton;

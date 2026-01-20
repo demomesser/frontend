@@ -1,4 +1,5 @@
 export enum SelectedPage {
+    NONE = "",
     HOME = "Hjem",
     ABOUTUS = "Om oss",
     SERVICES = "Tjenester",
@@ -11,6 +12,7 @@ export type Exhibitor = {
     name: string
     description: string
     image: string
+    link: string
 }
 
 export type NavItem =

@@ -1,21 +1,39 @@
-import type { Exhibitor } from "../../shared/types"; 
+import type { Exhibitor } from "../../shared/types"
 
 type Props = {
-	exhibitor: Exhibitor;
-};
+    exhibitor: Exhibitor
+}
 
 const ExhibitorCard = ({ exhibitor }: Props) => {
-	return (
-		<div className="border border-black rounded-md p-4 flex flex-col gap-2">
-			<img
-				src={exhibitor.image}
-				alt={exhibitor.name}
-				className="h-20 w-full"
-			/>
-			<h3 className="text-lg font-semibold">{exhibitor.name}</h3>
-			<p className="text-sm text-gray-600">{exhibitor.description}</p>
-		</div>
-	);
-};
+    return (
+        <div className="
+            rounded-md 
+            border
+            border-black
+            bg-white
+            p-4
+            shadow-md
+            transition 
+            hover:shadow-lg"
+        >
+            <a
+                href={exhibitor.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex 
+                    flex-col 
+                    gap-4
+                "
+            >
+                <img
+                    src={exhibitor.image}
+                    alt={exhibitor.name}
+                    className="h-20 w-full"
+                />
+                <p className="text-sm text-black">{exhibitor.description}</p>
+            </a>
+        </div >
+    )
+}
 
 export default ExhibitorCard;

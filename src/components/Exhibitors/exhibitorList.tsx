@@ -7,7 +7,7 @@ type Props = {
 
 const ExhibitorList = ({ exhibitors }: Props) => {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+		<div className="py-28 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			{exhibitors.map((exhibitor) => (
 				<ExhibitorCard key={exhibitor.id} exhibitor={exhibitor} />
 			))}
