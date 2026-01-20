@@ -1,6 +1,8 @@
 import { SelectedPage } from "../../shared/types"
 import { motion } from "framer-motion"
 import DirectorImg from "../../assets/director.jpeg"
+import Empl3Img from "../../assets/employee3.jpg"
+import ContactCard from "./contactCard"
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -34,7 +36,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                 </h1>
 
                 <motion.div
-                    className="grid w-full max-w-5xl grid-cols-1 gap-6 items-center md:grid-cols-3"
+                    className="grid w-full max-w-5xl grid-cols-1 gap-12 items-stretch md:grid-cols-3 md:-translate-x-24"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -48,7 +50,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 
                     {/* LEFT — FORM */}
                     <motion.div
-                        className="md:col-span-2"
+                        className="md:col-span-2 h-full"
                         variants={{
                             hidden: { opacity: 0, x: -40 },
                             visible: { opacity: 1, x: 0 }
@@ -59,7 +61,7 @@ const Contact = ({ setSelectedPage }: Props) => {
                         <form
                             method="POST"
                             action="https://formsubmit.co/erik.munkelien@demomesser.no"
-                            className="flex flex-col gap-5"
+                            className="flex h-full flex-col gap-5"
                         >
                             <input
                                 type="text"
@@ -93,43 +95,26 @@ const Contact = ({ setSelectedPage }: Props) => {
 
                     {/* RIGHT — CEO CARD */}
                     <motion.div
-                        className="flex flex-col gap-6 items-center md:flex-row md:gap-4 md:justify-center mt-4"
+                        className="md:col-span-1 flex flex-col md:flex-row gap-6 items-center mt-4"
                         variants={{
                             hidden: { opacity: 0, x: 40 },
                             visible: { opacity: 1, x: 0 }
                         }}
                     >
-                        <motion.div
-                            className="rounded-xl bg-white p-6 text-center shadow-lg max-w-sm"
-                            whileHover={{ scale: 1.03 }}
-                        >
-                            {/* Image */}
-                            <motion.div
-                                className="mx-auto mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-[#256670]"
-                                initial={{ scale: 0 }}
-                                animate={{ scale: 1 }}
-                                transition={{ type: "spring", stiffness: 120 }}
-                            >
-                                <img
-                                    src={DirectorImg}
-                                    alt="CEO"
-                                    className="h-full w-full object-cover"
-                                />
-                            </motion.div>
-
-                            {/* Info */}
-                            <h2 className="text-lg font-bold text-[#256670]">
-                                Erik Munkelien
-                            </h2>
-                            <p className="text-sm text-gray-600">
-                                Tenker bærekraft
-                            </p>
-
-                            <div className="mt-4 text-sm text-gray-700">
-                                <p>erik.munkelien@demomesser.no</p>
-                                <p>+47 484 00 789</p>
-                            </div>
-                        </motion.div>
+                        <ContactCard
+                            image={DirectorImg}
+                            name="Erik Munkelien"
+                            role="Tenker bærekraft"
+                            email="erik.munkelien@demomesser.no"
+                            phone="+47 484 00 789"
+                        />
+                        <ContactCard
+                            image={Empl3Img}
+                            name="Vinjar Berland"
+                            role="IT"
+                            email="vinjar.berland@demomesser.no"
+                            phone="+47 476 46 919"
+                        />
                     </motion.div>
                 </motion.div>
             </motion.div>
