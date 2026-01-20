@@ -22,7 +22,7 @@ const exhibitors: Exhibitor[] = [
 ]
 
 const NAV_ITEMS: NavItem[] = [
-    { type: "route", label: "Hjem", to: "/" },
+    { type: "route", label: "← Hjem", to: "/" },
 ]
 
 const Exhibitors = () => {

@@ -7,11 +7,13 @@ type Props = {
 const ExhibitorCard = ({ exhibitor }: Props) => {
     return (
         <div className="
+            w-[400px]
+            h-[240px]
             rounded-md 
             border
             border-black
             bg-white
-            p-4
+            p-6
             shadow-md
             transition 
             hover:shadow-lg"
@@ -22,7 +24,7 @@ const ExhibitorCard = ({ exhibitor }: Props) => {
                 rel="noopener noreferrer"
                 className="flex 
                     flex-col 
-                    gap-4
+                    gap-6
                 "
             >
                 <img

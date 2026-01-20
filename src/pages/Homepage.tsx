@@ -12,7 +12,7 @@ import { useLocation } from "react-router-dom"
 import type { NavItem } from "../shared/types"
 
 const NAV_ITEMS: NavItem[] = [
-    { type: "route", label: "Utstiller →", to: "/utstiller" },
+    { type: "route", label: "Utstillere →", to: "/utstillere" },
     { type: "page", page: SelectedPage.ABOUTUS },
     { type: "page", page: SelectedPage.SERVICES },
     { type: "page", page: SelectedPage.ARRANGEMENT },

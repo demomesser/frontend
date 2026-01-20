@@ -16,7 +16,7 @@ const Contact = ({ setSelectedPage }: Props) => {
     return (
         <section
             id={SelectedPage.CONTACT}
-            className="relative w-screen min-h-screen overflow-hidden scroll-mt-24"
+            className="relative w-screen min-h-screen overflow-hidden"
         >
             {/* Background */}
             <motion.div
@@ -28,7 +28,7 @@ const Contact = ({ setSelectedPage }: Props) => {
 
 
             <motion.div
-                className="relative z-10 flex flex-col items-center px-8 pt-6 md:px-6 md:pt-8"
+                className="relative z-10 flex flex-col items-center px-8 pt-32 md:px-6 md:pt-32"
                 onViewportEnter={() => setSelectedPage(SelectedPage.CONTACT)}
             >
                 <h1 className="mb-12 text-4xl font-bold text-primary-500">

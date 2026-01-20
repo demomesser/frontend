@@ -2,7 +2,7 @@ import { FaFacebookF, FaLinkedin } from "react-icons/fa"
 
 const Footer = () => {
     return (
-        <footer className="bg-[#1E425E] py-16">
+        <footer className="bg-[#1E425E] py-12">
             <div className="mx-auto w-1/2 flex justify-center">
                 <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
                     <p>Copyright © 2026 Demomesser All Rights Reserved.</p>

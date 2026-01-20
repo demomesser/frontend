@@ -1,18 +1,59 @@
 import type { Exhibitor } from "../../shared/types";
 import ExhibitorCard from "./exhibitorCard";
 
+import { motion } from "framer-motion"
+
 type Props = {
-	exhibitors: Exhibitor[]
+    exhibitors: Exhibitor[]
 }
 
 const ExhibitorList = ({ exhibitors }: Props) => {
-	return (
-		<div className="py-28 px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-			{exhibitors.map((exhibitor) => (
-				<ExhibitorCard key={exhibitor.id} exhibitor={exhibitor} />
-			))}
-		</div>
-	)
+    return (
+        <div>
+            <div className="mb-12 pt-32 text-center mx-4">
+                <h2 className="text-4xl font-bold text-[#1E425E]">
+                    Utstillere
+                </h2>
+
+                <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-[#EDFA8B]" />
+            </div>
+            <motion.div className="
+                px-4
+                grid
+                grid-cols-1
+                md:grid-cols-2
+                lg:grid-cols-3
+                gap-6
+                pb-8
+                place-items-center
+            "
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                    hidden: {},
+                    visible: {
+                        transition: {
+                            staggerChildren: 0.15,
+                        },
+                    },
+                }}
+            >
+
+                {exhibitors.map((exhibitor) => (
+                    <motion.div
+                        key={exhibitor.id}
+                        variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0 },
+                        }}
+                    >
+                        <ExhibitorCard exhibitor={exhibitor} />
+                    </motion.div>
+                ))}
+            </motion.div>
+        </div>
+    )
 }
 
 export default ExhibitorList;
