@@ -12,3 +12,14 @@ export type Exhibitor = {
     description: string
     image: string
 }
+
+export type NavItem =
+    | {
+        type: "page";
+        page: SelectedPage;
+    }
+    | {
+        type: "route";
+        label: string;
+        to: string;
+    };

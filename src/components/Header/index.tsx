@@ -2,18 +2,19 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Icon from "../../assets/icon.png"
 import { SelectedPage } from "../../shared/types";
-import Link from "./link";
-import LinkRoute from "./linkRoute";
 import useMediaQuery from "../../shared/useMedia";
 import ActionButton from "../../shared/ActionButton"
+import type { NavItem } from "../../shared/types";
+import NavItems from "./navItems";
 
 type Props = {
     isTopOfPage: boolean
     selectedPage: SelectedPage
     setSelectedPage: (value: SelectedPage) => void
+    navItems: NavItem[]
 }
 
-const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
+const Header = ({ isTopOfPage, selectedPage, setSelectedPage, navItems }: Props) => {
     const flexBetween = "flex items-center justify-between";
     const navBarBackground = isTopOfPage ? "bg-[#1E425E]" : "bg-[#1E425E]/50 backdrop-blur-md"
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -43,13 +44,12 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         {/* NAV ITEMS */}
                         <div className="flex flex-1 justify-center">
                             {isAboveMediumScreens && (
-                                <div className="flex gap-10 text-lg font-semibold whitespace-nowrap">
-                                    <LinkRoute label="Utstiller →" to="/utstiller" />
-                                    <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                    <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                    <Link page={SelectedPage.ARRANGEMENT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                    <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                                </div>
+                                <NavItems
+                                    items={navItems}
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                    className="flex gap-10 text-lg font-semibold whitespace-nowrap"
+                                />
                             )}
                         </div>
 
@@ -87,13 +87,12 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         </button>
                     </div>
 
-                    <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-                        <LinkRoute label="Utstiller →" to="/utstiller" />
-                        <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page={SelectedPage.ARRANGEMENT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                        <Link page={SelectedPage.CONTACT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-                    </div>
+                    <NavItems
+                        items={navItems}
+                        selectedPage={selectedPage}
+                        setSelectedPage={setSelectedPage}
+                        className="ml-[33%] flex flex-col gap-10 text-2xl"
+                    />
                 </div>
             )}
         </nav>
