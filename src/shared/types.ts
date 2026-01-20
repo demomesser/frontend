@@ -5,3 +5,10 @@ export enum SelectedPage {
     CONTACT = "Kontakt oss",
     ARRANGEMENT = "Arrangementer"
 }
+
+export type Exhibitor = {
+    id: number
+    name: string
+    description: string
+    image: string
+}

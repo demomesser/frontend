@@ -88,7 +88,7 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     </div>
 
                     <div className="ml-[33%] flex flex-col gap-10 text-2xl">
-                        <Link page={SelectedPage.HOME} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        <LinkRoute label="Utstiller →" to="/utstiller" />
                         <Link page={SelectedPage.ABOUTUS} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page={SelectedPage.SERVICES} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
                         <Link page={SelectedPage.ARRANGEMENT} selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
