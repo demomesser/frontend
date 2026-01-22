@@ -18,13 +18,13 @@ const ExhibitorList = ({ exhibitors }: Props) => {
                 <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-[#EDFA8B]" />
             </div>
             <motion.div className="
-                px-4
+                px-16
                 grid
                 grid-cols-1
                 md:grid-cols-2
                 lg:grid-cols-3
-                gap-6
-                pb-8
+                gap-8
+                pb-10
                 place-items-center
             "
                 initial="hidden"

@@ -1,17 +1,18 @@
-import Header from "../components/Header";
+import Header from "../components/Header"
 import type { Exhibitor } from "../shared/types"
 import ExhibitorList from "../components/Exhibitors/exhibitorList"
 import Footer from "../components/Footer"
 
-import type { NavItem } from "../shared/types";
+import type { NavItem } from "../shared/types"
 import { SelectedPage } from "../shared/types"
 
 import { useState } from "react"
 
 
-import SeweLogo from "../assets/SeweMaskin_logo.svg";
+import SeweLogo from "../assets/SeweMaskin_logo.svg"
 import WeidemannLogo from "../assets/weidemann_logo.png"
 import KonwiLogo from "../assets/konwi_logo.svg"
+import BeremaLogo from "../assets/berema_logo.svg"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -34,6 +35,13 @@ const exhibitors: Exhibitor[] = [
         description: "KONWI AS har siden 1981 opparbeidet seg 30 års lang erfaring med fremstilling av nye produkter og salg av vel innarbeidede kirkegårdsprodukter til kommuner, steinhuggere, gartnere og privatpersoner.",
         image: KonwiLogo,
         link: "https://www.kirketorget.as/"
+    },
+    {
+        id: 4,
+        name: "Berema",
+        description: "Berema AS ble etablert i 1968 med en klar visjon: å importere og distribuere kvalitetsprodukter gjennom et solid nettverk av fagforhandlere.",
+        image: BeremaLogo,
+        link: "https://www.berema.no/"
     },
     
 ]
