@@ -27,11 +27,13 @@ const ExhibitorCard = ({ exhibitor }: Props) => {
                     gap-6
                 "
             >
-                <img
-                    src={exhibitor.image}
-                    alt={exhibitor.name}
-                    className="h-20 w-full"
-                />
+                <div className="h-20 flex items-center justify-center">
+                    <img
+                        src={exhibitor.image}
+                        alt={exhibitor.name}
+                        className="max-h-full max-w-full object-contain"
+                    />
+                </div>
                 <p className="text-sm text-black">{exhibitor.description}</p>
             </a>
         </div >

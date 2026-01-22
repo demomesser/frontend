@@ -12,7 +12,7 @@ import { useState } from "react"
 import SeweLogo from "../assets/SeweMaskin_logo.svg"
 import WeidemannLogo from "../assets/weidemann_logo.png"
 import KonwiLogo from "../assets/konwi_logo.svg"
-import BeremaLogo from "../assets/berema_logo.svg"
+import CramerLogo from "../assets/cramer_logo.webp"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -40,7 +40,7 @@ const exhibitors: Exhibitor[] = [
         id: 4,
         name: "Berema",
         description: "Berema AS ble etablert i 1968 med en klar visjon: å importere og distribuere kvalitetsprodukter gjennom et solid nettverk av fagforhandlere.",
-        image: BeremaLogo,
+        image: CramerLogo,
         link: "https://www.berema.no/"
     },
     
