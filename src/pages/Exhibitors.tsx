@@ -39,7 +39,7 @@ const exhibitors: Exhibitor[] = [
     {
         id: 4,
         name: "Berema",
-        description: "Berema AS ble etablert i 1968 med en klar visjon: å importere og distribuere kvalitetsprodukter gjennom et solid nettverk av fagforhandlere.",
+        description: "Cramer leverer kraftige, batteridrevne verktøy for profesjonell bruk. Med skandinavisk design og moderne batteriteknologi tilbyr de stillegående, utslippsfrie og pålitelige løsninger.",
         image: CramerLogo,
         link: "https://www.berema.no/"
     },
