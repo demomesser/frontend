@@ -13,6 +13,7 @@ import SeweLogo from "../assets/SeweMaskin_logo.svg"
 import WeidemannLogo from "../assets/weidemann_logo.png"
 import KonwiLogo from "../assets/konwi_logo.svg"
 import CramerLogo from "../assets/cramer_logo.webp"
+import StigaLogo from "../assets/stiga_logo.jpeg"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -38,11 +39,19 @@ const exhibitors: Exhibitor[] = [
     },
     {
         id: 4,
-        name: "Berema",
+        name: "Cramer",
         description: "Cramer leverer kraftige, batteridrevne verktøy for profesjonell bruk. Med skandinavisk design og moderne batteriteknologi tilbyr de stillegående, utslippsfrie og pålitelige løsninger.",
         image: CramerLogo,
         link: "https://www.berema.no/"
     },
+    {
+        id: 5,
+        name: "Stiga",
+        description: "STIGA er et velkjent varemerke og en ledende produsent av hagemaskiner.",
+        image: StigaLogo,
+        link: "https://www.stiga.com/no/"
+    },
+
     
 ]
 
