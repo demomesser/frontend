@@ -10,13 +10,6 @@ type Props = {
 const ExhibitorList = ({ exhibitors }: Props) => {
     return (
         <div>
-            <div className="mb-12 pt-32 text-center mx-4">
-                <h2 className="text-4xl font-bold text-[#1E425E]">
-                    Utstillere
-                </h2>
-
-                <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-[#EDFA8B]" />
-            </div>
             <motion.div className="
                 px-16
                 grid
