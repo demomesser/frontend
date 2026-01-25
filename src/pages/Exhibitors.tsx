@@ -68,6 +68,7 @@ const NAV_ITEMS: NavItem[] = [
 ]
 
 const ExhibitorCategoryId: Record<ExhibitorCategory, string> = {
+    [ExhibitorCategory.TITLE]: SelectedPage.TITLE,
     [ExhibitorCategory.TUNGE_MASKINER]: SelectedPage.TUNGE_MASKINER,
     [ExhibitorCategory.PARK_HAGE]: SelectedPage.PARK_HAGE,
     [ExhibitorCategory.LADING]: SelectedPage.LADING,
