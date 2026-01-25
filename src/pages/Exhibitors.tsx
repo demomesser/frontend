@@ -62,7 +62,17 @@ const exhibitors: Exhibitor[] = [
 
 const NAV_ITEMS: NavItem[] = [
     { type: "route", label: "← Hjem", to: "/" },
+    { type: "page", page: SelectedPage.TUNGE_MASKINER },
+    { type: "page", page: SelectedPage.PARK_HAGE },
+    { type: "page", page: SelectedPage.DIVERSE },
 ]
+
+const ExhibitorCategoryId: Record<ExhibitorCategory, string> = {
+    [ExhibitorCategory.TUNGE_MASKINER]: SelectedPage.TUNGE_MASKINER,
+    [ExhibitorCategory.PARK_HAGE]: SelectedPage.PARK_HAGE,
+    [ExhibitorCategory.LADING]: SelectedPage.LADING,
+    [ExhibitorCategory.DIVERSE]: SelectedPage.DIVERSE,
+}
 
 const Exhibitors = () => {
     const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
@@ -80,7 +90,7 @@ const Exhibitors = () => {
         const handleScroll = () => {
             if (window.scrollY === 0) {
                 setIsTopOfPage(true);
-                setSelectedPage(SelectedPage.HOME)
+                setSelectedPage(SelectedPage.TITLE)
             } else
                 if (window.scrollY !== 0) {
                     setIsTopOfPage(false)
@@ -97,7 +107,7 @@ const Exhibitors = () => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
                 navItems={NAV_ITEMS} />
-            <section className="bg-[#1E425E] min-h-screen text-white py-24 px-6 text-center">
+            <section id={SelectedPage.TITLE} className="bg-[#1E425E] min-h-screen text-white py-32 px-6 text-center">
                 <h1 className="text-4xl md:text-5xl font-extrabold">
                     Utstillere
                 </h1>
@@ -107,16 +117,26 @@ const Exhibitors = () => {
                 <ExhibitorSlider exhibitors={exhibitors} />
             </section>
             <main className="flex-grow px-4 md:px-8 py-16 space-y-16">
-                {Object.entries(groupedExhibitors).map(([category, exhibitors]) => (
-                    <section key={category} className="space-y-6">
-                        <h2 className="text-center text-4xl font-bold text-[#1E425E]">
-                            {category}
-                        </h2>
+                {Object.entries(groupedExhibitors).map(([category, exhibitors]) => {
+                    const id = ExhibitorCategoryId[category as ExhibitorCategory]
+                    return (
+                        <section
+                            key={category}
+                            id={id}
+                            className="space-y-6 scroll-mt-32"
+                        >
+                            <h2 className="text-center text-4xl font-bold text-[#1E425E]">
+                                {category}
+                            </h2>
 
-                        <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-[#EDFA8B]" />
-                        <ExhibitorList exhibitors={exhibitors} />
-                    </section>
-                ))}
+
+                            <div className="mx-auto mt-4 h-1 w-24 rounded-full bg-[#EDFA8B]" />
+
+
+                            <ExhibitorList exhibitors={exhibitors} />
+                        </section>
+                    )
+                })}
             </main>
             <Footer />
         </div>

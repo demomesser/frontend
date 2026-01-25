@@ -1,7 +1,8 @@
 export enum ExhibitorCategory {
-    PARK_HAGE = "PARK/HAGEMASKINER",
+    TITLE = "TITLE",
+    PARK_HAGE = "PARK OG HAGEMASKINER",
     TUNGE_MASKINER = "TRAKTORER/HJULLASTERE/GRAVEMASKINER",
-    LADING = "LADING/INFRASTRUKTUR",
+    LADING = "LADING OG INFRASTRUKTUR",
     DIVERSE = "DIV MASKINER (FEIING-NYTTEKJØRETØY)"
 }
 
@@ -12,10 +13,11 @@ export enum SelectedPage {
     SERVICES = "Tjenester",
     CONTACT = "Kontakt oss",
     ARRANGEMENT = "Arrangementer",
-    PARK_HAGE = ExhibitorCategory.PARK_HAGE,
-    TUNGE_MASKINER = ExhibitorCategory.TUNGE_MASKINER,
-    LADING = ExhibitorCategory.LADING,
-    DIVERSE = ExhibitorCategory.DIVERSE
+    TITLE = ExhibitorCategory.TITLE,
+    PARK_HAGE = "Hagemaskiner",
+    TUNGE_MASKINER = "Tunge maskiner",
+    LADING = "Lading og Infrastuktur",
+    DIVERSE = "Diverse" 
 }
 
 export type Exhibitor = {
