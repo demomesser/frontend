@@ -16,6 +16,7 @@ import KonwiLogo from "../assets/konwi_logo.svg"
 import CramerLogo from "../assets/cramer_logo.webp"
 import StigaLogo from "../assets/stiga_logo.jpeg"
 import NellemannLogo from "../assets/nellemann_machinery_logo.jpg"
+import HusqvarnaLogo from "../assets/husqvarna_logo.png"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -62,10 +63,18 @@ const exhibitors: Exhibitor[] = [
     {
         id: 6,
         name: "Nellemann Machinery",
-        description: "Leverandør av profesjonelle maskiner til vei & park, golf & idrett, landbruk og entreprenører",
+        description: "Leverandør av profesjonelle maskiner til vei & park, golf & idrett, landbruk og entreprenører.",
         image: NellemannLogo,
         link: "https://nellemannmachinery.no/",
         category: ExhibitorCategory.TUNGE_MASKINER
+    },
+    {
+        id: 7,
+        name: "Husqvarna",
+        description: "Drevet av en lidenskap for innovasjon siden 1689 tilbyr Husqvarna profesjonelle produkter til skog, park og hage. Ytelse og bruk oppfyller kravene til sikkerhet og miljø i våre banebrytende innovasjoner.",
+        image: HusqvarnaLogo,
+        link: "https://www.husqvarna.com/",
+        category: ExhibitorCategory.PARK_HAGE
     },
 ]
 
