@@ -15,6 +15,7 @@ import WeidemannLogo from "../assets/weidemann_logo.png"
 import KonwiLogo from "../assets/konwi_logo.svg"
 import CramerLogo from "../assets/cramer_logo.webp"
 import StigaLogo from "../assets/stiga_logo.jpeg"
+import NellemannLogo from "../assets/nellemann_machinery_logo.jpg"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -57,6 +58,14 @@ const exhibitors: Exhibitor[] = [
         image: KonwiLogo,
         link: "https://www.kirketorget.as/",
         category: ExhibitorCategory.DIVERSE
+    },
+    {
+        id: 6,
+        name: "Nellemann Machinery",
+        description: "Leverandør av profesjonelle maskiner til vei & park, golf & idrett, landbruk og entreprenører",
+        image: NellemannLogo,
+        link: "https://nellemannmachinery.no/",
+        category: ExhibitorCategory.TUNGE_MASKINER
     },
 ]
 
