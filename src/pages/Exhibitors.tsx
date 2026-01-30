@@ -14,7 +14,6 @@ import SeweLogo from "../assets/SeweMaskin_logo.svg"
 import WeidemannLogo from "../assets/weidemann_logo.png"
 import KonwiLogo from "../assets/konwi_logo.svg"
 import CramerLogo from "../assets/cramer_logo.webp"
-import StigaLogo from "../assets/stiga_logo.jpeg"
 import NellemannLogo from "../assets/nellemann_machinery_logo.jpg"
 import HusqvarnaLogo from "../assets/husqvarna_logo.png"
 
@@ -46,14 +45,6 @@ const exhibitors: Exhibitor[] = [
     },
     {
         id: 4,
-        name: "Stiga",
-        description: "STIGA er et velkjent varemerke og en ledende produsent av hagemaskiner.",
-        image: StigaLogo,
-        link: "https://www.stiga.com/no/",
-        category: ExhibitorCategory.PARK_HAGE
-    },
-    {
-        id: 5,
         name: "Konwi",
         description: "KONWI AS har siden 1981 opparbeidet seg 30 års lang erfaring med fremstilling av nye produkter og salg av vel innarbeidede kirkegårdsprodukter til kommuner, steinhuggere, gartnere og privatpersoner.",
         image: KonwiLogo,
@@ -61,7 +52,7 @@ const exhibitors: Exhibitor[] = [
         category: ExhibitorCategory.DIVERSE
     },
     {
-        id: 6,
+        id: 5,
         name: "Nellemann Machinery",
         description: "Leverandør av profesjonelle maskiner til vei & park, golf & idrett, landbruk og entreprenører.",
         image: NellemannLogo,
@@ -69,7 +60,7 @@ const exhibitors: Exhibitor[] = [
         category: ExhibitorCategory.TUNGE_MASKINER
     },
     {
-        id: 7,
+        id: 6,
         name: "Husqvarna",
         description: "Drevet av en lidenskap for innovasjon siden 1689 tilbyr Husqvarna profesjonelle produkter til skog, park og hage. Ytelse og bruk oppfyller kravene til sikkerhet og miljø i våre banebrytende innovasjoner.",
         image: HusqvarnaLogo,
