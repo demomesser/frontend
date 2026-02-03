@@ -16,6 +16,7 @@ import KonwiLogo from "../assets/konwi_logo.svg"
 import CramerLogo from "../assets/cramer_logo.webp"
 import NellemannLogo from "../assets/nellemann_machinery_logo.jpg"
 import HusqvarnaLogo from "../assets/husqvarna_logo.png"
+import HymaxLogo from "../assets/hymax_logo.avif"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -66,6 +67,14 @@ const exhibitors: Exhibitor[] = [
         image: HusqvarnaLogo,
         link: "https://www.husqvarna.com/",
         category: ExhibitorCategory.PARK_HAGE
+    },
+    {
+        id: 7,
+        name: "Hymax",
+        description: "Hymax har røtter og historie fra maskinproduksjon i 1956, men fra 1997 har vi vært en rendyrket maskinimportør. Selskapet importerer varemerker som Kubota, Giant og Ausa, som alle er ledende varemerker i segmentet «under 10 tonn».",
+        image: HymaxLogo,
+        link: "https://www.hymax.no/elektriske-maskiner",
+        category: ExhibitorCategory.TUNGE_MASKINER
     },
 ]
 
