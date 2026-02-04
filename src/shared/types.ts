@@ -26,7 +26,7 @@ export type Exhibitor = {
     description: string
     image: string
     link: string
-    category: ExhibitorCategory
+    category: ExhibitorCategory[]
 }
 
 export type NavItem =

@@ -26,7 +26,9 @@ const exhibitors: Exhibitor[] = [
         description: "Norcar leverer minilastere med løftekapasitet fra 750 kg til over 1500 kg og motoreffekter fra 20 hk til 49,6 hk. Maskinene kan leveres i ulike konfigurasjoner og med en rekke tilleggsutstyr, alt etter dine behov.",
         image: SeweLogo,
         link: "https://www.sewemaskin.no/",
-        category: ExhibitorCategory.TUNGE_MASKINER
+        category: [
+            ExhibitorCategory.TUNGE_MASKINER
+        ]
     },
     {
         id: 2,
@@ -34,7 +36,9 @@ const exhibitors: Exhibitor[] = [
         description: "Weidemann tilbyr kompakte Hoftracs, hjullastere, teleskopiske hjullastere, teleskoplastere og et bredt utvalg av redskaper og tilbehør.",
         image: WeidemannLogo,
         link: "https://www.weidemann.com/uk/",
-        category: ExhibitorCategory.TUNGE_MASKINER
+        category: [
+            ExhibitorCategory.TUNGE_MASKINER
+        ]
     },
 
     {
@@ -43,7 +47,9 @@ const exhibitors: Exhibitor[] = [
         description: "Cramer leverer kraftige, batteridrevne verktøy for profesjonell bruk. Med skandinavisk design og moderne batteriteknologi tilbyr de stillegående, utslippsfrie og pålitelige løsninger.",
         image: CramerLogo,
         link: "https://www.berema.no/",
-        category: ExhibitorCategory.PARK_HAGE
+        category: [
+            ExhibitorCategory.PARK_HAGE
+        ]
     },
     {
         id: 4,
@@ -51,7 +57,9 @@ const exhibitors: Exhibitor[] = [
         description: "KONWI AS har siden 1981 opparbeidet seg 30 års lang erfaring med fremstilling av nye produkter og salg av vel innarbeidede kirkegårdsprodukter til kommuner, steinhuggere, gartnere og privatpersoner.",
         image: KonwiLogo,
         link: "https://www.kirketorget.as/",
-        category: ExhibitorCategory.DIVERSE
+        category: [
+            ExhibitorCategory.DIVERSE
+        ]
     },
     {
         id: 5,
@@ -59,7 +67,9 @@ const exhibitors: Exhibitor[] = [
         description: "Leverandør av profesjonelle maskiner til vei & park, golf & idrett, landbruk og entreprenører.",
         image: NellemannLogo,
         link: "https://nellemannmachinery.no/",
-        category: ExhibitorCategory.TUNGE_MASKINER
+        category: [
+            ExhibitorCategory.TUNGE_MASKINER
+        ]
     },
     {
         id: 6,
@@ -67,7 +77,9 @@ const exhibitors: Exhibitor[] = [
         description: "Drevet av en lidenskap for innovasjon siden 1689 tilbyr Husqvarna profesjonelle produkter til skog, park og hage. Ytelse og bruk oppfyller kravene til sikkerhet og miljø i våre banebrytende innovasjoner.",
         image: HusqvarnaLogo,
         link: "https://www.husqvarna.com/",
-        category: ExhibitorCategory.PARK_HAGE
+        category: [
+            ExhibitorCategory.PARK_HAGE
+        ]
     },
     {
         id: 7,
@@ -75,7 +87,9 @@ const exhibitors: Exhibitor[] = [
         description: "Hymax har røtter og historie fra maskinproduksjon i 1956, men fra 1997 har vi vært en rendyrket maskinimportør. Selskapet importerer varemerker som Kubota, Giant og Ausa, som alle er ledende varemerker i segmentet «under 10 tonn».",
         image: HymaxLogo,
         link: "https://www.hymax.no/elektriske-maskiner",
-        category: ExhibitorCategory.TUNGE_MASKINER
+        category: [
+            ExhibitorCategory.TUNGE_MASKINER
+        ]
     },
     {
         id: 8,
@@ -83,7 +97,10 @@ const exhibitors: Exhibitor[] = [
         description: "NTS leverer alt fra enkle ATV hengere til mer avansert tømmerhengere med drift og kran, tipphengere og spesialhengere.",
         image: NtsLogo,
         link: "https://norsktilhengersenter.no/",
-        category: ExhibitorCategory.DIVERSE
+        category: [
+            ExhibitorCategory.PARK_HAGE,
+            ExhibitorCategory.DIVERSE
+        ]
     }
 ]
 
@@ -108,8 +125,10 @@ const Exhibitors = () => {
 
     const groupedExhibitors = exhibitors.reduce<Record<string, Exhibitor[]>>(
         (acc, exhibitor) => {
-            acc[exhibitor.category] ??= []
-            acc[exhibitor.category].push(exhibitor)
+            exhibitor.category.forEach(category =>{
+                acc[category] ??= []
+                acc[category].push(exhibitor)
+            })
             return acc
         },
         {}
