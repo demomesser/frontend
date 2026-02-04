@@ -17,6 +17,7 @@ import CramerLogo from "../assets/cramer_logo.webp"
 import NellemannLogo from "../assets/nellemann_machinery_logo.jpg"
 import HusqvarnaLogo from "../assets/husqvarna_logo.png"
 import HymaxLogo from "../assets/hymax_logo.avif"
+import NtsLogo from "../assets/nts_logo.png"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -76,6 +77,14 @@ const exhibitors: Exhibitor[] = [
         link: "https://www.hymax.no/elektriske-maskiner",
         category: ExhibitorCategory.TUNGE_MASKINER
     },
+    {
+        id: 8,
+        name: "Nts",
+        description: "NTS leverer alt fra enkle ATV hengere til mer avansert tømmerhengere med drift og kran, tipphengere og spesialhengere.",
+        image: NtsLogo,
+        link: "https://norsktilhengersenter.no/",
+        category: ExhibitorCategory.DIVERSE
+    }
 ]
 
 const NAV_ITEMS: NavItem[] = [
