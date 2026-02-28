@@ -18,6 +18,8 @@ import NellemannLogo from "../assets/nellemann_machinery_logo.jpg"
 import HusqvarnaLogo from "../assets/husqvarna_logo.png"
 import HymaxLogo from "../assets/hymax_logo.avif"
 import NtsLogo from "../assets/nts_logo.png"
+import NilsfiskLogo from "../assets/nilfisk_logo.jpeg"
+import LadeByraaetLogo from "../assets/ladebyraaet_logo.png"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -101,7 +103,27 @@ const exhibitors: Exhibitor[] = [
             ExhibitorCategory.PARK_HAGE,
             ExhibitorCategory.DIVERSE
         ]
-    }
+    },
+    {
+        id: 9,
+        name: "Nilfisk",
+        description: "En verdensleder innen rengjøringsmaskiner, produkter, løsninger og tjenester for både nærings- og forbrukersegmentet.",
+        image: NilsfiskLogo,
+        link: "https://www.nilfisk.com/nb-no/",
+        category: [
+            ExhibitorCategory.DIVERSE
+        ]
+    },
+    {
+        id: 10,
+        name: "Ladebyrået",
+        description: "Profesjonelle brukte hurtigladere for transportbransjen. 50-350kW effekt, 20+ års erfaring med lading av elektriske nyttekjøretøy i Norge.",
+        image: LadeByraaetLogo,
+        link: "https://www.nilfisk.com/nb-no/",
+        category: [
+            ExhibitorCategory.DIVERSE
+        ]
+    },
 ]
 
 const NAV_ITEMS: NavItem[] = [
