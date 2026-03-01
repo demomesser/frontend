@@ -119,7 +119,7 @@ const exhibitors: Exhibitor[] = [
         name: "Ladebyrået",
         description: "Profesjonelle brukte hurtigladere for transportbransjen. 50-350kW effekt, 20+ års erfaring med lading av elektriske nyttekjøretøy i Norge.",
         image: LadeByraaetLogo,
-        link: "https://www.nilfisk.com/nb-no/",
+        link: "https://www.ladebyraet.no/",
         category: [
             ExhibitorCategory.DIVERSE
         ]
