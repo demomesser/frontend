@@ -18,8 +18,9 @@ import NellemannLogo from "../assets/nellemann_machinery_logo.jpg"
 import HusqvarnaLogo from "../assets/husqvarna_logo.png"
 import HymaxLogo from "../assets/hymax_logo.avif"
 import NtsLogo from "../assets/nts_logo.png"
-import NilsfiskLogo from "../assets/nilfisk_logo.jpeg"
 import LadeByraaetLogo from "../assets/ladebyraaet_logo.png"
+import CfMaskinLogo from "../assets/cf_maskin_logo.jpeg"
+import NomacoLogo from "../assets/nomaco_logo.jpg"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -106,21 +107,32 @@ const exhibitors: Exhibitor[] = [
     },
     {
         id: 9,
-        name: "Nilfisk",
-        description: "En verdensleder innen rengjøringsmaskiner, produkter, løsninger og tjenester for både nærings- og forbrukersegmentet.",
-        image: NilsfiskLogo,
-        link: "https://www.nilfisk.com/nb-no/",
+        name: "Ladebyrået",
+        description: "Profesjonelle brukte hurtigladere for transportbransjen. 50-350kW effekt, 20+ års erfaring med lading av elektriske nyttekjøretøy i Norge.",
+        image: LadeByraaetLogo,
+        link: "https://www.ladebyraet.no/",
         category: [
             ExhibitorCategory.DIVERSE
         ]
     },
     {
         id: 10,
-        name: "Ladebyrået",
-        description: "Profesjonelle brukte hurtigladere for transportbransjen. 50-350kW effekt, 20+ års erfaring med lading av elektriske nyttekjøretøy i Norge.",
-        image: LadeByraaetLogo,
-        link: "https://www.ladebyraet.no/",
+        name: "CF maskin",
+        description: "CF – gruppen består i dag av 11 maskinforretninger fra Skogmo, Overhalla i nord til Skjeberg i sør. CF Maskin ble etablert i 1988 med hovedvekt på CLAAS høstemaskiner og Fendt traktorer.",
+        image: CfMaskinLogo,
+        link: "https://www.schaeffer.de/en/products/8/electric-loader-23e/",
         category: [
+            ExhibitorCategory.TUNGE_MASKINER
+        ]
+    },
+    {
+        id: 11,
+        name: "Nomaco",
+        description: "Hos Nomaco finner du et bredt utvalg av elektriske maskiner og kjøretøy for profesjonell bruk. De er stillegående, driftssikre og miljøvennlige – og samtidig en god investering.",
+        image: NomacoLogo,
+        link: "https://www.nomaconorge.no/",
+        category: [
+            ExhibitorCategory.PARK_HAGE,
             ExhibitorCategory.DIVERSE
         ]
     },
