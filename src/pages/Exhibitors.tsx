@@ -21,6 +21,7 @@ import NtsLogo from "../assets/nts_logo.png"
 import LadeByraaetLogo from "../assets/ladebyraaet_logo.png"
 import CfMaskinLogo from "../assets/cf_maskin_logo.jpeg"
 import NomacoLogo from "../assets/nomaco_logo.jpg"
+import BeckMaskinLogo from "../assets/beck_maskin_logo.svg"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -130,6 +131,17 @@ const exhibitors: Exhibitor[] = [
         name: "Nomaco",
         description: "Hos Nomaco finner du et bredt utvalg av elektriske maskiner og kjøretøy for profesjonell bruk. De er stillegående, driftssikre og miljøvennlige – og samtidig en god investering.",
         image: NomacoLogo,
+        link: "https://www.nomaconorge.no/",
+        category: [
+            ExhibitorCategory.PARK_HAGE,
+            ExhibitorCategory.DIVERSE
+        ]
+    },
+    {
+        id: 12,
+        name: "Beck Maskin",
+        description: "Din partner på anleggsmaskiner og utstyr. Kobelco Gravemaskiner, Wacker Neuson komprimeringsprodukter, hjulgravere, hjullastere og hjuldumpere og mer",
+        image: BeckMaskinLogo,
         link: "https://www.nomaconorge.no/",
         category: [
             ExhibitorCategory.PARK_HAGE,
