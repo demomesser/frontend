@@ -119,7 +119,7 @@ const exhibitors: Exhibitor[] = [
     {
         id: 10,
         name: "CF maskin",
-        description: "CF- gruppen består i dag av 11 maskinforretninger fra Skogmo i nord til Skjeberg i sør. CF Maskin ble etablert i 1988, og er forhandler av alle Claas produkter. I tillegg er de importør av andre merkevarer som f.eks Schäffer mini/hjullastere.",
+        description: "CF- gruppen består i dag av 11 maskinforretninger fra Skogmo i nord til Skjeberg i sør. CF Maskin ble etablert i 1988, og er forhandler av alle Claas produkter. I tillegg er vi importør av andre merkevarer som f.eks Schäffer mini/hjullastere.",
         image: CfMaskinLogo,
         link: "https://cf.no/",
         category: [
