@@ -119,9 +119,9 @@ const exhibitors: Exhibitor[] = [
     {
         id: 10,
         name: "CF maskin",
-        description: "CF – gruppen består i dag av 11 maskinforretninger fra Skogmo, Overhalla i nord til Skjeberg i sør. CF Maskin ble etablert i 1988 med hovedvekt på CLAAS høstemaskiner og Fendt traktorer.",
+        description: "CF- gruppen består i dag av 11 maskinforretninger fra Skogmo i nord til Skjeberg i sør. CF Maskin ble etablert i 1988, og er forhandler av alle Claas produkter. I tillegg er de importør av andre merkevarer som f.eks Schäffer mini/hjullastere.",
         image: CfMaskinLogo,
-        link: "https://www.schaeffer.de/en/products/8/electric-loader-23e/",
+        link: "https://cf.no/",
         category: [
             ExhibitorCategory.TUNGE_MASKINER
         ]
