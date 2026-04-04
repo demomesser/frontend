@@ -22,6 +22,7 @@ import LadeByraaetLogo from "../assets/ladebyraaet_logo.png"
 import CfMaskinLogo from "../assets/cf_maskin_logo.jpeg"
 import NomacoLogo from "../assets/nomaco_logo.jpg"
 import BeckMaskinLogo from "../assets/beck_maskin_logo.svg"
+import HusqvarnaConstructionLogo from "../assets/husqvarna_construction_logo.png"
 
 const exhibitors: Exhibitor[] = [
     {
@@ -146,6 +147,16 @@ const exhibitors: Exhibitor[] = [
         category: [
             ExhibitorCategory.PARK_HAGE,
             ExhibitorCategory.DIVERSE
+        ]
+    },
+    {
+        id: 13,
+        name: "Husqvarna Construction",
+        description: "Husqvarna Construction tilbyr kraftige maskiner og verktøy for kutting, boring og bearbeiding av harde materialer.",
+        image: HusqvarnaConstructionLogo,
+        link: "https://www.husqvarnaconstruction.com/no/",
+        category: [
+            ExhibitorCategory.PARK_HAGE,
         ]
     },
 ]
