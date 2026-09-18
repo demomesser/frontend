@@ -33,7 +33,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                     <div className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#EDFA8B]">
                         Dato kommer
                     </div>
-                    <p className="text-xl font-bold leading-tight">Informasjon kommer</p>
+                    <p className="text-xl font-bold leading-tight">Informasjon om nye messer kommer snart</p>
                 </div>
                 <div className="rounded-lg bg-[#1E425E] p-8 md:p-10 text-white shadow-md m-6">
 
@@ -41,7 +41,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
                     <div className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#EDFA8B]">
                         Dato kommer
                     </div>
-                    <p className="text-xl font-bold leading-tight">Informasjon kommer</p>
+                    <p className="text-xl font-bold leading-tight">Informasjon om nye messer kommer snart</p>
                 </div>
 
 
