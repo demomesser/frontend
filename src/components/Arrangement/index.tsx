@@ -31,7 +31,7 @@ const Arrangement = ({ setSelectedPage }: Props) => {
 
                     {/* DATE */}
                     <div className="mb-3 text-xs font-semibold uppercase tracking-wide text-[#EDFA8B]">
-                        Høsten 2026
+                        Dato kommer
                     </div>
                     <p className="text-xl font-bold leading-tight">Informasjon kommer</p>
                 </div>
